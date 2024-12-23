@@ -3,3 +3,9 @@ npm i express mongoose dotenv bcrypt jsonwebtoken
 nodemon is used to re run the server when ever changes are made
 
 npm i cookie-parser  will help in reading cookies
+
+using cloudineary for storing the images(npm i cloudinary)
+
+multer helps node
+
+multiuri  saves fils in data base 

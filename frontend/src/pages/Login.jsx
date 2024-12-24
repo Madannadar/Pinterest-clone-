@@ -1,14 +1,18 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { UserData } from '../context/userContext';
 
 const login = () => {
    
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
 
-   const submitHandler = e => {
+    const {loginUser, btnLoading} = UserData();
+    const navigate = useNavigate();
+
+   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(email, password);
+    loginUser(email, password, navigate);
    }
 
   return (
@@ -24,26 +28,26 @@ const login = () => {
                         Email
                     </label>
                     <input
-              type="email"
-              id="email"
-              className="common-input"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
+                        type="email"
+                        id="email"
+                        className="common-input"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                        />
                 </div>
                 <div className="mb-4">
                     <label htmlFor="email" className='block text-sm font-medium text-gray-700'>
                         Password
                     </label>
                     <input
-              type="password"
-              id="password"
-              className="common-input"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
+                        type="password"
+                        id="password"
+                        className="common-input"
+                        value={password}
+                        onChange={(e) => setPassword(e.target.value)}
+                        required
+                        />
                 </div>
                 <button type='subimt' className='common-btn'>login</button>
             </form>

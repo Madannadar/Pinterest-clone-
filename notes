@@ -9,3 +9,5 @@ using cloudineary for storing the images(npm i cloudinary)
 multer helps node
 
 multiuri  saves fils in data base 
+
+npm i react-hot-toast

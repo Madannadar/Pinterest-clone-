@@ -8,14 +8,14 @@ import path from "path";
 dotenv.config();
 
 cloudinary.v2.config({
-  cloud_name: process.env.Cloud_Name,
-  api_key: process.env.Cloud_Api,
-  api_secret: process.env.Cloud_Secret,
+    Cloud_Name: process.env.CLOUD_NAME,
+    CLoud_Api_Key: process.env.CLOUD_API_KEY,
+    Cloud_Secrete: process.env.CLOUD_SECRETE,
 });
 
 const app = express();
 
-const port = process.env.PORT;
+const port = process.env.PORT || 3000;
 
 //using middlewares
 app.use(express.json());

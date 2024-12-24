@@ -1,7 +1,7 @@
 import jwt from "jsonwebtoken";
 
 const generateToken = (id, res) => {
-  const token = jwt.sign({ id }, process.env.JWT_SEC, {
+  const token = jwt.sign({ id }, 'dsfasfas', {
     expiresIn: "15d",
   });
 

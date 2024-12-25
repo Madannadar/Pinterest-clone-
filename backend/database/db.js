@@ -5,7 +5,6 @@ const connectDb = async () => {
     mongoose.set("bufferCommands", false); // Set bufferCommands before connection
     await mongoose.connect(process.env.MONGO_URL, {
       dbName: "pinterest",
-      useNewUrlParser: true, // Recommended options
       useUnifiedTopology: true,
     });
 

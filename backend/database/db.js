@@ -11,5 +11,6 @@ const connectDb = async () => {
     console.log(error);
   }
 };
+mongoose.set('bufferCommands', false);
 
 export default connectDb;

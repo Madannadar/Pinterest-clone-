@@ -2,15 +2,18 @@ import mongoose from "mongoose";
 
 const connectDb = async () => {
   try {
-    await mongoose.connect(process.env.MONGO_URL,{
-      dbName: 'pinterest',
+    mongoose.set("bufferCommands", false); // Set bufferCommands before connection
+    await mongoose.connect(process.env.MONGO_URL, {
+      dbName: "pinterest",
+      useNewUrlParser: true, // Recommended options
+      useUnifiedTopology: true,
     });
 
-    console.log("Mongodb connected");
+    console.log("MongoDB connected");
   } catch (error) {
-    console.log(error);
+    console.error("Error connecting to MongoDB:", error);
+    process.exit(1); // Exit process with failure
   }
 };
-mongoose.set('bufferCommands', false);
 
 export default connectDb;

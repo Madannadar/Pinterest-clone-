@@ -4,10 +4,8 @@ const connectDb = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URL, {
       dbName: "pinterest", // Specify the database name
-      useNewUrlParser: true, // Ensures support for new MongoDB connection strings
-      useUnifiedTopology: true, // Enables the new connection management engine
-      serverSelectionTimeoutMS: 100000, // Timeout for initial connection
-      connectTimeoutMS: 300000, // Timeout for overall connection establishment
+      serverSelectionTimeoutMS: 100000, // Timeout for server selection
+      connectTimeoutMS: 300000, // Timeout for connection establishment
     });
 
     console.log("MongoDB connected successfully");
@@ -18,3 +16,4 @@ const connectDb = async () => {
 };
 
 export default connectDb;
+

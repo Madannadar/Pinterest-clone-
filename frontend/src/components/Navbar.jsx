@@ -15,12 +15,15 @@ const Navbar = ({ user }) => {
             <span className="text-red-600 text-xl font-bold">Pinterest</span>
           </Link>
 
-          <div className="flex items-center space-x-4 w-[200px]">
+          <div className="flex items-center space-x-4 w-[250px]">
             <Link to="/" className="text-gray-700 hover:text-gray-900">
               Home
             </Link>
             <Link to="/create" className="text-gray-700 hover:text-gray-900">
               Create
+            </Link>
+            <Link to="/Check_Out" className="text-gray-700 hover:text-gray-900">
+              Check-Out
             </Link>
             <Link
               to="/account"

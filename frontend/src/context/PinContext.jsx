@@ -7,6 +7,7 @@ const PinContext = createContext();
 export const PinProvider = ({ children }) => {
   const [pins, setPins] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [cart, setCart] = useState([]);
 
   async function fetchPins() {
     try {
@@ -83,13 +84,27 @@ export const PinProvider = ({ children }) => {
     }
   }
 
+  // const addToCart = (pin) => {
+  //   if (!cart.some((item) => item._id === pin._id)) {
+  //     setCart((prev) => [...prev, pin]);
+  //     toast.success("Added to cart");
+  //   } else {
+  //     toast.error("Already in cart");
+  //   }
+  // };
+
+  // const removeFromCart = (pinId) => {
+  //   setCart((prev) => prev.filter((item) => item._id !== pinId));
+  //   toast.success("Removed from cart");
+  // };
+
   async function addPin(
     formData,
     setFilePrev,
     setFile,
     setTitle,
     setPin,
-    navigate
+    navigate,
   ) {
     try {
       const { data } = await axios.post("/api/pin/new", formData);
@@ -122,6 +137,8 @@ export const PinProvider = ({ children }) => {
         deletePin,
         addPin,
         fetchPins,
+        // addToCart,  
+        // removeFromCart,
       }}
     >
       {children}

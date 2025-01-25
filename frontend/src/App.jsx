@@ -9,6 +9,7 @@ import PinPage from "./pages/PinPage";
 import Create from "./pages/Create";
 import Account from "./pages/Account";
 import UserProfile from "./pages/UserProfile";
+import Check_Out from "./pages/Check_Out";
 
 const App = () => {
   const { loading, isAuth, user } = UserData();
@@ -30,6 +31,7 @@ const App = () => {
               element={isAuth ? <UserProfile user={user} /> : <Login />}
             />
             <Route path="/create" element={isAuth ? <Create /> : <Login />} />
+            <Route path="/Check_Out" element={isAuth ? <Check_Out /> : <Login />} />
             <Route
               path="/pin/:id"
               element={isAuth ? <PinPage user={user} /> : <Login />}

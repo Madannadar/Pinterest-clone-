@@ -15,6 +15,12 @@ const PinCard = ({ pin }) => {
               >
                 View Pin
               </Link>
+              <Link
+                // to={`/pin/${pin._id}`}
+                className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+              >
+                Add to cart
+              </Link>
             </div>
           </div>
         </div>

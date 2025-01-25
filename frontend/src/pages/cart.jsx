@@ -2,7 +2,7 @@ import React from "react";
 import { PinData } from "../context/PinContext";
 import PinCard from "../components/PinCard";
 
-const Check_Out = () => {
+const Cart = () => {
   const { cart, removeFromCart } = PinData();
 
   return (
@@ -30,4 +30,4 @@ const Check_Out = () => {
   );
 };
 
-export default Check_Out;
+export default Cart;

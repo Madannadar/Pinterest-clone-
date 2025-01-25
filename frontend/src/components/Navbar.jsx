@@ -22,8 +22,8 @@ const Navbar = ({ user }) => {
             <Link to="/create" className="text-gray-700 hover:text-gray-900">
               Create
             </Link>
-            <Link to="/Check_Out" className="text-gray-700 hover:text-gray-900">
-              Check-Out
+            <Link to="/cart" className="text-gray-700 hover:text-gray-900">
+              Cart
             </Link>
             <Link
               to="/account"

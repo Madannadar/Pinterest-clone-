@@ -25,6 +25,10 @@ app.use(cookieParser());
 // Importing routes
 import userRoutes from "./routes/userRoutes.js";
 import pinRoutes from "./routes/pinRoutes.js";
+import cartRoutes from "./routes/cartRoutes.js"; // Replace require with import
+
+// Use the cart routes
+app.use('/api/cart', cartRoutes);
 
 // Using routes
 app.use("/api/user", userRoutes);

@@ -5,7 +5,7 @@ import PinCard from "../components/PinCard";
 
 const Home = () => {
   const { pins, loading } = PinData();
-  console.log({ pins, loading }); // Debug to ensure values are coming through
+  // console.log( pins, loading ); // Debug to ensure values are coming through
   
   return (
     <div className="bg-gray-100 min-h-screen py-6">

@@ -7,7 +7,7 @@ const Cart = () => {
 
   return (
     <div className="p-6 w-full">
-      <h1 className="text-center text-2xl font-bold mt-4">Your Cart</h1>
+      <h1 className="text-center text-2xl font-bold mt-4">Your liked history</h1>
 
       <div className="mt-4 flex flex-wrap justify-center gap-4">
         {cart && cart.length > 0 ? (
@@ -23,7 +23,7 @@ const Cart = () => {
             </div>
           ))
         ) : (
-          <p>No items in the cart</p>
+          <p>No pins in the liked history</p>
         )}
       </div>
     </div>

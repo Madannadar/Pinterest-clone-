@@ -22,9 +22,9 @@ const Navbar = ({ user }) => {
             <Link to="/create" className="text-gray-700 hover:text-gray-900">
               Create
             </Link>
-            <Link to="/cart" className="text-gray-700 hover:text-gray-900">
-              Cart
-            </Link>
+            {/* <Link to="/Liked" className="text-gray-700 hover:text-gray-900">
+              Liked
+            </Link> */}
             <Link
               to="/account"
               className="w-8 h-8 rounded-full bg-gray-300 flex items-center justify-center text-xl text-gray-700"

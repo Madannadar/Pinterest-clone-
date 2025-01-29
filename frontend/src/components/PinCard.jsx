@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const PinCard = ({ pin }) => {
   const addToCart = async (pinId) => {
     try {
-      const response = await fetch('/api/cart', {
+      const response = await fetch('/api/Liked', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -18,12 +18,12 @@ const PinCard = ({ pin }) => {
         const data = await response.json();
         console.log("data",data);
         
-        alert('Item added to cart!');
+        alert('Item added to Liked!');
       } else {
-        alert('Failed to add item to cart.');
+        alert('Failed to add item to Liked.');
       }
     } catch (error) {
-      console.error('Error adding to cart:', error);
+      console.error('Error adding to Liked:', error);
       alert('An error occurred.');
     }
   };
@@ -41,12 +41,12 @@ const PinCard = ({ pin }) => {
               >
                 View Pin
               </Link>
-              <button
+              {/* <button
                 onClick={() => addToCart(pin._id)}
                 className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
               >
-                Add to cart
-              </button>
+                Like
+              </button> */}
             </div>
           </div>
         </div>
